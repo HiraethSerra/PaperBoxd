@@ -1,13 +1,18 @@
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import BooksSection from "./components/BooksSection";
+import Community from "./components/Community";
+import Ticker from "./components/Ticker";
 
 export default function App() {
   return (
-    <div className="min-h-[200vh]">
+    <div className="w-full">
       <Navbar />
-      <main className="flex flex-col items-center pt-32">
-        <h1 className="text-5xl font-extrabold italic text-black/20">
-          PaperBoxd
-        </h1>
+      <main className="pt-24">
+        <Hero />
+        <BooksSection />
+        <Ticker /> 
+        <Community />
       </main>
     </div>
   );
