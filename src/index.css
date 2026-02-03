@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-jetbrains: "JetBrains Mono", monospace;
+  --color-classic-rose: #ECD0EC;
+  --color-pearly-purple: #BA71A2;
+  --color-dark-wine: #7E2A53;
+  --color-notebook-paper: #fffdf5;
+}
+
+@layer base {
+  :root {
+    --background: #fffdf5;
+    --foreground: #1a1a1a;
+    --primary: #BA71A2;
+    --radius: 0.75rem;
+  }
+
+  body {
+    font-family: var(--font-jetbrains);
+    background-color: var(--color-notebook-paper);
+    
+    background-image: 
+      linear-gradient(rgba(236, 208, 236, 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(236, 208, 236, 0.3) 1px, transparent 1px);
+    background-size: 25px 25px;
+    
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-notebook-paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-classic-rose);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-pearly-purple);
+}
