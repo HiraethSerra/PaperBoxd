@@ -4,9 +4,12 @@
 @theme {
   --font-bricolage: "Bricolage Grotesque", sans-serif;
   --font-script: "Monsieur La Doulaise", cursive;
-  --color-classic-rose: #ECD0EC;
-  --color-pearly-purple: #BA71A2;
-  --color-dark-wine: #7E2A53;
+  
+  --color-burgundy: #6C0820;
+  --color-cherry: #F2AEBC;
+  --color-misty: #F2DCDB;
+  --color-silver-blue: #5A86CB;
+  --color-lapis: #3D5D91;
   --color-notebook-paper: #fffdf5;
 }
 
@@ -14,22 +17,11 @@
   body {
     font-family: var(--font-bricolage);
     background-color: var(--color-notebook-paper);
+    /* Grid lines now use Silver Lake Blue */
     background-image: 
-      linear-gradient(rgba(236, 208, 236, 0.3) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(236, 208, 236, 0.3) 1px, transparent 1px);
+      linear-gradient(rgba(90, 134, 203, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(90, 134, 203, 0.08) 1px, transparent 1px);
     background-size: 25px 25px;
-    min-height: 100vh;
-    margin: 0;
+    color: var(--color-burgundy);
   }
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 25s linear infinite;
 }
